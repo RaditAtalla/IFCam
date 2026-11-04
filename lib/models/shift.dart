@@ -4,12 +4,14 @@ class Shift {
   final String id;
   final Schedule schedule;
   final String sellerName;
-  final bool isTaken;
+  bool isTaken;
+  String? buyerName;
 
-  const Shift({
+  Shift({
     required this.id,
     required this.schedule,
     required this.sellerName,
-    required this.isTaken,
+    this.isTaken = false,
+    this.buyerName,
   });
 }
