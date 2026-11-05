@@ -10,9 +10,9 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   bool isEditing = false;
 
-  String name = 'Asprak IFLAB';
+  String name = 'John Doe';
   String nim = '103022400000';
-  String email = 'asprak@iflab.ac.id';
+  String email = 'doe@iflab.ac.id';
   String phone = '081234567890';
 
   late TextEditingController nameController;
@@ -134,7 +134,7 @@ class _ProfilePageState extends State<ProfilePage> {
             const CircleAvatar(
               radius: 50,
               backgroundColor: Color(0xFF1E40AF),
-              child: Icon(Icons.person, color: Colors.white, size: 56),
+              backgroundImage: AssetImage("/img/radit_tani.jpg"),
             ),
             const SizedBox(height: 16),
             Text(

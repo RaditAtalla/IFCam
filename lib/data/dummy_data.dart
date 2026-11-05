@@ -2,7 +2,7 @@ import '../models/attendance.dart';
 import '../models/schedule.dart';
 import '../models/shift.dart';
 
-const String currentUserName = 'Asprak IFLAB';
+const String currentUserName = 'John Doe';
 const int currentWeek = 2;
 
 const bool dummyInsideArea = true;

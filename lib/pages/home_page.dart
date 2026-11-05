@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               const CircleAvatar(
                 radius: 28,
                 backgroundColor: Color(0xFF1E40AF),
-                child: Icon(Icons.person, color: Colors.white, size: 30),
+                backgroundImage: AssetImage("/img/radit_tani.jpg"),
               ),
               const SizedBox(width: 16),
               Expanded(

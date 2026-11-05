@@ -20,7 +20,6 @@ class _MainShellState extends State<MainShell> {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(text)));
   }
 
-  // Cek waktu & lokasi dulu, baru kamera dibuka
   Future<void> openCamera() async {
     final active = getActiveSchedule();
 
@@ -42,7 +41,6 @@ class _MainShellState extends State<MainShell> {
       MaterialPageRoute(builder: (context) => CameraPage(schedule: active)),
     );
 
-    // refresh halaman setelah kembali dari presensi
     if (mounted) setState(() {});
   }
 
@@ -67,7 +65,6 @@ class _MainShellState extends State<MainShell> {
 
   @override
   Widget build(BuildContext context) {
-    // Sengaja tanpa "const" supaya halaman dibuat ulang & datanya selalu segar
     final pages = [HomePage(), ShiftPage(), HistoryPage(), ProfilePage()];
 
     return Scaffold(
