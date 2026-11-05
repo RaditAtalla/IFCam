@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'main_shell.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool passwordHidden = true;
 
   void login(BuildContext context) {
     Navigator.pushReplacement(
@@ -68,11 +75,24 @@ class LoginPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     TextField(
-                      obscureText: true,
+                      obscureText: passwordHidden,
                       decoration: InputDecoration(
                         prefixIcon: const Icon(
                           Icons.lock_outline,
                           color: Colors.blueGrey,
+                        ),
+                        suffixIcon: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              passwordHidden = !passwordHidden;
+                            });
+                          },
+                          icon: Icon(
+                            passwordHidden
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                            color: Colors.blueGrey,
+                          ),
                         ),
                         hintText: '********',
                         border: OutlineInputBorder(
